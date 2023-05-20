@@ -1,0 +1,22 @@
+.not-found {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin: 15px;
+}
+
+.not-found h2 {
+    color: #212529;
+    font-weight: 400;
+    font-size: 115px;
+}
+
+.home-btn {
+    text-decoration: none;
+    color: #212529;
+    width: 100px;
+}
+
+.home-btn:hover {
+    color: lightslategray;
+}

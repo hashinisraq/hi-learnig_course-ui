@@ -1,0 +1,26 @@
+.boxShadow {
+    border: 1px solid;
+    padding: 5px 0 5px 0;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+#moto {
+    /* s */
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
