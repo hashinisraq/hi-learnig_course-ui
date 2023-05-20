@@ -2,7 +2,7 @@
 
 The site can be found at the following addresses 🌐:
 
-- Main: <https://0neacademy.netlify.com>
+- Main: <https://hi-learning-course.web.app/>
 - Server: <https://hi-learnig_course.onrender.com>
 
 ## Installation
@@ -10,20 +10,12 @@ The site can be found at the following addresses 🌐:
 You must first clone the repository. To do so, first open your console and type:
 
 ```bash
-git clone https://github.com/hashinisraq/hi-learnig_course-ui
+git clone https://github.com/hashinisraq/hi-learnig_course-ui.git
 ```
 
-It is recommended to install the packages using yarn.
-If you don't have yarn installed already, do the following:
-
-```bash
-npm install --global yarn
-yarn --version
-```
-
-After you have installed yarn, run the following command:
+It is recommended to install the packages, do the following:
 
 ```bash
 cd hi-learnig_course-ui
-yarn install
+npm install
 ```
