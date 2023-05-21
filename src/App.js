@@ -1,3 +1,4 @@
+import "./App.css";
 import Header from "./Components/Shared/Header";
 import Footer from "./Components/Shared/Footer";
 import Home from "./Pages/Home";
@@ -21,6 +22,7 @@ import { useEffect, useState } from "react";
 import Board from "./Game/Board";
 import Square from "./Game/Square";
 import TermsConditions from "./Pages/TermsConditions";
+import AdminRoute from "./Pages/Login/AdminRoute";
 
 
 // Game
@@ -144,6 +146,9 @@ function App() {
             </div>
           )}
         </Container>
+        <Container className="text-center py-2">
+          <span style={{ fontSize: "20px" }}><b>Reload to play again</b></span>
+        </Container>
       </>
     )
   }
@@ -170,7 +175,7 @@ function App() {
               </Route>
               <Route path="/ask_doubt" element={<PrivateRoute><AskDoubt /></PrivateRoute>}>
               </Route>
-              <Route path="/admin_panel" element={<PrivateRoute><AdminPanel /></PrivateRoute>}>
+              <Route path="/admin_panel" element={<AdminRoute><AdminPanel /></AdminRoute>}>
               </Route>
               <Route path="/addToCart/:courseTitle" element={<PrivateRoute><Cart /></PrivateRoute>}>
               </Route>
