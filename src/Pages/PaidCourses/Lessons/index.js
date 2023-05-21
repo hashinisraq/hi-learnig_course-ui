@@ -51,7 +51,7 @@ const Lessons = () => {
                 <div className="container1">
                     <div className="main-video">
                         <div className="video">
-                            <iframe src="https://drive.google.com/file/d/1h9DoitlyQDbttEWo0IwwSkEdfG_AlFVq/preview" title={first_content?.topic} width="100%" height="400px" allow="autoplay" />
+                            <iframe src="https://drive.google.com/file/d/1h9DoitlyQDbttEWo0IwwSkEdfG_AlFVq/preview" allowFullScreen title={first_content?.topic} width="100%" height="400px" allow="autoplay" />
                             <h3 className="title">{first_content?.topic}</h3>
                         </div>
                     </div>
