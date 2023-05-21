@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const useUsers = () => {
     const [users, setUsers] = useState([]);
     useEffect(() => {
-        fetch('https://zeroneacademy-server.onrender.com/users')
+        fetch('https://learningcourse-server.onrender.com/users')
             .then(res => res.json())
             .then(data => setUsers(data))
     }, [users])

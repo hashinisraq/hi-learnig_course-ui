@@ -6,7 +6,7 @@ const AskDoubt = () => {
 
 
     useEffect(() => {
-        fetch('https://zeroneacademy-server.onrender.com/ask_doubt')
+        fetch('https://learningcourse-server.onrender.com/ask_doubt')
             .then(res => res.json())
             .then(data => setIssues(data))
     }, [issues])

@@ -13,7 +13,7 @@ const AddFreeContent = () => {
 
         if (course !== "" && topic !== "" && video !== "") {
             if (course === "RECURSION IN PYTHON") {
-                fetch('https://zeroneacademy-server.onrender.com/recursion_in_python', {
+                fetch('https://learningcourse-server.onrender.com/recursion_in_python', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -26,7 +26,7 @@ const AddFreeContent = () => {
                 alert(`${topic} is added in ${course} successfully!`);
             }
             else if (course === "GRAPH IN PYTHON") {
-                fetch('https://zeroneacademy-server.onrender.com/graph_in_python', {
+                fetch('https://learningcourse-server.onrender.com/graph_in_python', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -39,7 +39,7 @@ const AddFreeContent = () => {
                 alert(`${topic} is added in ${course} successfully!`);
             }
             else if (course === "QUEUE IN PYTHON") {
-                fetch('https://zeroneacademy-server.onrender.com/queue_in_python', {
+                fetch('https://learningcourse-server.onrender.com/queue_in_python', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

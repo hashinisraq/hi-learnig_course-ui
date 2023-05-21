@@ -8,7 +8,7 @@ const YoutubePlayer = () => {
 
     const Recursion = () => {
         useEffect(() => {
-            fetch('https://zeroneacademy-server.onrender.com/recursion_in_python')
+            fetch('https://learningcourse-server.onrender.com/recursion_in_python')
                 .then(res => res.json())
                 .then(data => setcontents(data))
         }, [])
@@ -16,7 +16,7 @@ const YoutubePlayer = () => {
 
     const GraphInPython = () => {
         useEffect(() => {
-            fetch('https://zeroneacademy-server.onrender.com/graph_in_python')
+            fetch('https://learningcourse-server.onrender.com/graph_in_python')
                 .then(res => res.json())
                 .then(data => setcontents(data))
         }, [])
@@ -24,7 +24,7 @@ const YoutubePlayer = () => {
 
     const QueueInPython = () => {
         useEffect(() => {
-            fetch('https://zeroneacademy-server.onrender.com/queue_in_python')
+            fetch('https://learningcourse-server.onrender.com/queue_in_python')
                 .then(res => res.json())
                 .then(data => setcontents(data))
         }, [])

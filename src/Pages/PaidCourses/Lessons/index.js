@@ -7,57 +7,25 @@ const Lessons = () => {
     const { courseTitle } = useParams();
     const [contents, setcontents] = useState([]);
 
-    const ProgrammingLanguageI = () => {
+    const MSWD = () => {
         useEffect(() => {
-            fetch('https://zeroneacademy-server.onrender.com/programming_language_I')
-                .then(res => res.json())
-                .then(data => setcontents(data))
-        }, [])
-    }
-
-    const ProgrammingLanguageII = () => {
-        useEffect(() => {
-            fetch('https://zeroneacademy-server.onrender.com/programming_language_II')
-                .then(res => res.json())
-                .then(data => setcontents(data))
-        }, [])
-    }
-
-    const DataStructure = () => {
-        useEffect(() => {
-            fetch('https://zeroneacademy-server.onrender.com/data_structure')
-                .then(res => res.json())
-                .then(data => setcontents(data))
-        }, [])
-    }
-
-    const MathematicsI = () => {
-        useEffect(() => {
-            fetch('https://zeroneacademy-server.onrender.com/mathematics_I')
+            fetch('https://learningcourse-server.onrender.com/mern_stack_web_development')
                 .then(res => res.json())
                 .then(data => setcontents(data))
         }, [])
     }
 
 
-    if (courseTitle === "PROGRAMMING LANGUAGE I") {
-        ProgrammingLanguageI();
-    }
-    else if (courseTitle === "PROGRAMMING LANGUAGE II") {
-        ProgrammingLanguageII();
-    }
-    else if (courseTitle === "DATA STRUCTURES") {
-        DataStructure();
-    }
-    else if (courseTitle === "MATHEMATICS I: DIFFERENTIAL CALCULUS & COORDINATE GEOMETRY") {
-        MathematicsI();
+
+    if (courseTitle === "MERN STACK WEB DEVELEPMENT") {
+        MSWD();
     }
 
     const first_content = contents[0];
 
     const handleOnClick = () => {
-        let listvideo = document.querySelectorAll('.video-list .vid')
-        let mainVideo = document.querySelector('.main-video video');
+        let listvideo = document.querySelectorAll('.video-list .vid');
+        let mainVideo = document.querySelector('.main-video iframe');
         let title = document.querySelector('.main-video .title');
 
         listvideo.forEach(video => {
@@ -83,7 +51,7 @@ const Lessons = () => {
                 <div className="container1">
                     <div className="main-video">
                         <div className="video">
-                            <video src={`https://drive.google.com/uc?id=${first_content?.video}`} controls controlsList="nodownload"></video>
+                            <iframe src="https://drive.google.com/file/d/1h9DoitlyQDbttEWo0IwwSkEdfG_AlFVq/preview" title={first_content?.topic} width="100%" height="400px" allow="autoplay" />
                             <h3 className="title">{first_content?.topic}</h3>
                         </div>
                     </div>
@@ -104,7 +72,7 @@ const Lessons = () => {
                                                 {Object.entries(value).map(([key1, value1]) =>
                                                     <Accordion.Body className="m-0 p-0" key={key1}>
                                                         <div className="vid">
-                                                            <video src={`https://drive.google.com/uc?id=${value1}`} muted></video>
+                                                            <small src={`https://drive.google.com/file/d/${value1}/preview`} title={value1} width="20%" height="40px" allow="autoplay" />
                                                             <h3 className="title">{key1}</h3>
                                                         </div>
                                                     </Accordion.Body>

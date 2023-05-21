@@ -14,7 +14,7 @@ const AskDoubt = () => {
         let issue = issueRef?.current.value;
 
         if (name !== "" && email !== "" && issue !== "") {
-            fetch('https://zeroneacademy-server.onrender.com/ask_doubt', {
+            fetch('https://learningcourse-server.onrender.com/ask_doubt', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

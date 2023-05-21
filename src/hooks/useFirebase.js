@@ -53,7 +53,7 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, role, phone, enroll, batch) => {
         const user = { email, displayName, role, phone, enroll, batch };
-        fetch('https://zeroneacademy-server.onrender.com/users', {
+        fetch('https://learningcourse-server.onrender.com/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

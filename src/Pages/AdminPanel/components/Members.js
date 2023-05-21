@@ -4,7 +4,7 @@ import { Table } from "react-bootstrap";
 const Members = () => {
     const [users, setUsers] = useState([]);
     useEffect(() => {
-        fetch('https://zeroneacademy-server.onrender.com/users')
+        fetch('https://learningcourse-server.onrender.com/users')
             .then(res => res.json())
             .then(data => setUsers(data))
     }, [users])

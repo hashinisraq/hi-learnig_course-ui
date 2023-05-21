@@ -27,12 +27,11 @@ const CourseDetails = () => {
                         <h4 className="pb-2">Course Instructor</h4>
                         <Container className="d-flex align-items-center justify-content-start border rounded p-3">
                             <div>
-                                <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="instructor" width="80px" style={{ borderRadius: "50%" }} />
+                                <img src="https://i.ibb.co/bHX1stY/formal.jpg" alt="instructor" width="80px" height="85px" style={{ borderRadius: "50%" }} />
                             </div>
                             <div className="ps-3">
-                                MSc (English), University of Oxford (UK) <br />
-                                BA, MA (English), University of Dhaka <br />
-                                IELTS: 8.5
+                                BSc (EEE)<br />
+                                Ahsanullah University of Science and Technology (BD)
                             </div>
                         </Container>
                     </div>
@@ -41,22 +40,28 @@ const CourseDetails = () => {
                         <Container className="border rounded py-2">
                             <Row className="gy-3">
                                 <Col sm={12} md={6} lg={6}>
-                                    ✔️ Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae repellat dolorum iure commodi harum unde similique?
+                                    ✔️ HTML
                                 </Col>
                                 <Col sm={12} md={6} lg={6}>
-                                    ✔️ Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae repellat dolorum iure commodi harum unde similique?
+                                    ✔️ CSS
                                 </Col>
                                 <Col sm={12} md={6} lg={6}>
-                                    ✔️ Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae repellat dolorum iure commodi harum unde similique?
+                                    ✔️ JAVASCRIPT
                                 </Col>
                                 <Col sm={12} md={6} lg={6}>
-                                    ✔️ Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae repellat dolorum iure commodi harum unde similique?
+                                    ✔️ REACT
                                 </Col>
                                 <Col sm={12} md={6} lg={6}>
-                                    ✔️ Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae repellat dolorum iure commodi harum unde similique?
+                                    ✔️ NODE-JS
                                 </Col>
                                 <Col sm={12} md={6} lg={6}>
-                                    ✔️ Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae repellat dolorum iure commodi harum unde similique?
+                                    ✔️ EXPRESS
+                                </Col>
+                                <Col sm={12} md={6} lg={6}>
+                                    ✔️ MONGODB
+                                </Col>
+                                <Col sm={12} md={6} lg={6}>
+                                    ✔️ BOOTSTRAP, TAILWIND CSS & MATERIAL UI
                                 </Col>
                             </Row>
                         </Container>
@@ -77,7 +82,7 @@ const CourseDetails = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="2">
-                                <Accordion.Header>How much much time will take to finish the courses?</Accordion.Header>
+                                <Accordion.Header>How much time will take to finish the courses?</Accordion.Header>
                                 <Accordion.Body>
                                     It depends on how you utilize your time to the courses.
                                 </Accordion.Body>
@@ -99,7 +104,7 @@ const CourseDetails = () => {
                     <div className="pb-5">
                         <h4 className="pb-2">How To Pay</h4>
                         <Container className="m-0 p-0 text-center">
-                            <iframe width="100%" height="350" src="https://www.youtube.com/embed/LjbK3_zk4jc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                            <iframe width="100%" height="350" src="https://www.youtube.com/embed/E7hQ7AoF-8o" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                         </Container>
                     </div>
                     <div className="pb-5">
@@ -118,7 +123,7 @@ const CourseDetails = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="2">
-                                <Accordion.Header>How much much time will take to finish the courses?</Accordion.Header>
+                                <Accordion.Header>How much time will take to finish the courses?</Accordion.Header>
                                 <Accordion.Body>
                                     It depends on how you utilize your time to the courses.
                                 </Accordion.Body>
@@ -140,7 +145,7 @@ const CourseDetails = () => {
                 </Col>
                 <Col sm={12} md={4} lg={4} className="text-center pb-5">
                     <Container className="border rounded p-0 m-0">
-                        <iframe variant="top" style={{ borderTopLeftRadius: "5px", borderTopRightRadius: "5px" }} width="100%" height="205" src="https://www.youtube.com/embed/LjbK3_zk4jc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                        <iframe variant="top" style={{ borderTopLeftRadius: "5px", borderTopRightRadius: "5px" }} width="100%" height="205" src="https://www.youtube.com/embed/E7hQ7AoF-8o" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
                         <h5 className="ps-4 py-3">Bdt 499</h5>
                         <div className="text-center">

@@ -6,21 +6,21 @@ const Orders = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        fetch('https://zeroneacademy-server.onrender.com/orders')
+        fetch('https://learningcourse-server.onrender.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [orders])
 
     useEffect(() => {
-        fetch('https://zeroneacademy-server.onrender.com/users')
+        fetch('https://learningcourse-server.onrender.com/users')
             .then(res => res.json())
             .then(data => setUsers(data))
     }, [users])
 
 
-    const handOnClick = (TxId, status, displayName, course, phone, batch) => {
+    const handOnClick = (mailaddress, TxId, status, displayName, course, phone, batch) => {
         const user = { TxId, status };
-        fetch('https://zeroneacademy-server.onrender.com/orders', {
+        fetch('https://learningcourse-server.onrender.com/orders', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -35,10 +35,26 @@ const Orders = () => {
             updateUserEnroll_1(displayName, course);
             updateUserEnroll_2(displayName, batch);
             updateUserPhone(displayName, phone);
+            nodemailer(mailaddress, "confirmed");
         }
         else if (status === "cancelled") {
             updateUserPhone(displayName, phone);
+            nodemailer(mailaddress, "cancelled");
         }
+    }
+
+    const nodemailer = (mail, action) => {
+        const data = {
+            order_email: mail,
+            status: action,
+        }
+        fetch('https://learningcourse-server.onrender.com/send-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ data }),
+        });
     }
 
     const updateUserEnroll_1 = (displayName, course) => {
@@ -49,7 +65,7 @@ const Orders = () => {
 
         const user = { displayName, newEnroll };
 
-        fetch('https://zeroneacademy-server.onrender.com/users_enroll_update', {
+        fetch('https://learningcourse-server.onrender.com/users_enroll_update', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -69,7 +85,7 @@ const Orders = () => {
 
         const user = { displayName, newBatch };
 
-        fetch('https://zeroneacademy-server.onrender.com/users_batch_update', {
+        fetch('https://learningcourse-server.onrender.com/users_batch_update', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -85,7 +101,7 @@ const Orders = () => {
     const updateUserPhone = (displayName, phone) => {
         const user = { displayName, phone };
 
-        fetch('https://zeroneacademy-server.onrender.com/users_update_phone', {
+        fetch('https://learningcourse-server.onrender.com/users_update_phone', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -128,11 +144,11 @@ const Orders = () => {
                         {order.status !== "" ? <td>{order.status}</td> : <td className="d-flex justify-content-between align-items-center">
                             <Button variant="secondary" className="bg-dark" onClick={e => {
                                 e.preventDefault();
-                                handOnClick(order.TxId, "confirmed", order.displayName, order.course, order.phone, order.batchNo);
+                                handOnClick(order.email, order.TxId, "confirmed", order.displayName, order.course, order.phone, order.batchNo);
                             }}>Confirm</Button>
                             <Button variant="secondary" className="bg-dark" onClick={e => {
                                 e.preventDefault();
-                                handOnClick(order.TxId, "cancelled", order.displayName, order.course, order.phone, order.batchNo);
+                                handOnClick(order.email, order.TxId, "cancelled", order.displayName, order.course, order.phone, order.batchNo);
                             }}>Cancel</Button>
                         </td>}
                     </tr>)}

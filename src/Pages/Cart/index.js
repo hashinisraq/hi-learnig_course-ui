@@ -33,17 +33,8 @@ const Cart = () => {
     const price = selectedPaidCourse[0]?.price;
 
     let batchNo;
-    if (course === "PROGRAMMING LANGUAGE I") {
-        batchNo = "PLI-01";
-    }
-    else if (course === "PROGRAMMING LANGUAGE II") {
-        batchNo = "PLII-01";
-    }
-    else if (course === "DATA STRUCTURES") {
-        batchNo = "DT-01";
-    }
-    else if (course === "MATHEMATICS I: DIFFERENTIAL CALCULUS & COORDINATE GEOMETRY") {
-        batchNo = "MI-01";
+    if (course === "MERN STACK WEB DEVELEPMENT") {
+        batchNo = "MSWD-01";
     }
 
     const handleBooking = () => {
@@ -54,7 +45,7 @@ const Cart = () => {
 
 
         if (phone !== "" && TxId !== "" && payment !== "") {
-            fetch('https://zeroneacademy-server.onrender.com/orders', {
+            fetch('https://learningcourse-server.onrender.com/orders', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

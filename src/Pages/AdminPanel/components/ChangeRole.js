@@ -14,7 +14,7 @@ const ChangeRole = () => {
 
         if (email !== "" && phone !== "" && role !== "") {
             const user = { email, role };
-            fetch('https://zeroneacademy-server.onrender.com/users', {
+            fetch('https://learningcourse-server.onrender.com/users', {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'
@@ -41,7 +41,7 @@ const ChangeRole = () => {
     const updateUserPhone = (email, phone) => {
         const user = { email, phone };
 
-        fetch('https://zeroneacademy-server.onrender.com/users_phone', {
+        fetch('https://learningcourse-server.onrender.com/users_phone', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

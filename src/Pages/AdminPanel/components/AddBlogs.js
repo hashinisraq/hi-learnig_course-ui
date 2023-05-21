@@ -19,7 +19,7 @@ const AddBlogs = () => {
 
 
         if (author !== "" && author_img !== "" && title !== "" && banner !== "" && details !== "" && date !== "") {
-            fetch('https://zeroneacademy-server.onrender.com/blogs', {
+            fetch('https://learningcourse-server.onrender.com/blogs', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
