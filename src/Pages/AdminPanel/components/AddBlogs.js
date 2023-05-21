@@ -107,7 +107,7 @@ const AddBlogs = () => {
 
                 <Form.Group as={Row} className="mb-3">
                     <Col className="text-center" sm={{ span: 10, offset: 2 }}>
-                        <Button className="bg-dark" onClick={handleOnSubmit} disabled>Submit</Button>
+                        <Button className="bg-dark" onClick={handleOnSubmit}>Submit</Button>
                     </Col>
                 </Form.Group>
             </Form>
