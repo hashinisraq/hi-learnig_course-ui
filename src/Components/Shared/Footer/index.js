@@ -54,7 +54,7 @@ const Footer = () => {
                 </Row>
             </Container>
             <div className="text-white d-flex justify-content-center p-3">
-                © HI-LEARNING COURSE 2023
+                © HI-LEARNING COURSE
             </div>
         </div>
     );
