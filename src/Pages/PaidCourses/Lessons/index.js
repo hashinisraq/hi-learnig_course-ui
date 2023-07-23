@@ -65,19 +65,14 @@ const Lessons = () => {
                                     </Accordion.Header>
                                     {Object.entries(content?.levels).map(([key, value]) =>
                                         <Accordion.Body className="m-0 p-1" key={key}>
-                                            <Accordion>
-                                                <Accordion.Header>
-                                                    <b>{key}</b>
-                                                </Accordion.Header>
-                                                {Object.entries(value).map(([key1, value1]) =>
-                                                    <Accordion.Body className="m-0 p-0" key={key1}>
-                                                        <div className="vid">
-                                                            <small src={`https://drive.google.com/file/d/${value1}/preview`} title={value1} width="20%" height="40px" allow="autoplay" />
-                                                            <h3 className="title">{key1}</h3>
-                                                        </div>
-                                                    </Accordion.Body>
-                                                )}
-                                            </Accordion>
+                                            {Object.entries(value).map(([key1, value1]) =>
+                                                <Accordion.Body className="m-0 p-0" key={key1}>
+                                                    <div className="vid">
+                                                        <small src={`https://drive.google.com/file/d/${value1}/preview`} title={value1} width="20%" height="40px" allow="autoplay" />
+                                                        <h3 className="title">{key1}</h3>
+                                                    </div>
+                                                </Accordion.Body>
+                                            )}
                                         </Accordion.Body>
                                     )}
                                 </Accordion.Item>
